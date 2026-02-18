@@ -1,0 +1,12 @@
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+.DS_Store
+build/
+GlimpseTranslate.app/
+GlimpseTranslate.dmg
+dmg_staging/
+release_notes.md
