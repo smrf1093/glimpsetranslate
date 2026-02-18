@@ -4,8 +4,8 @@ A lightweight macOS menu bar app that provides instant inline translation for an
 
 Think of it as Apple's built-in "Look Up" dictionary — but for translation, with support for 28+ languages.
 
-[![Latest Release](https://img.shields.io/github/v/release/AnarManafov/GlimpseTranslate)](https://github.com/AnarManafov/GlimpseTranslate/releases/latest)
-[![Download DMG](https://img.shields.io/github/downloads/AnarManafov/GlimpseTranslate/total)](https://github.com/AnarManafov/GlimpseTranslate/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/smrf1093/glimpsetranslate)](https://github.com/smrf1093/glimpsetranslate/releases/latest)
+[![Download DMG](https://img.shields.io/github/downloads/smrf1093/glimpsetranslate/total)](https://github.com/smrf1093/glimpsetranslate/releases/latest)
 ![macOS](https://img.shields.io/badge/macOS-14.0%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-5.9%2B-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -91,7 +91,7 @@ Runs on both **Apple Silicon** (M1/M2/M3/M4) and **Intel** Macs.
 
 ### Download (Recommended)
 
-1. Go to the [**Latest Release**](https://github.com/AnarManafov/GlimpseTranslate/releases/latest)
+1. Go to the [**Latest Release**](https://github.com/smrf1093/glimpsetranslate/releases/latest)
 2. Download **GlimpseTranslate.dmg**
 3. Open the DMG and drag **Glimpse Translate** to your **Applications** folder
 4. Launch from Applications
@@ -112,7 +112,7 @@ Runs on both **Apple Silicon** (M1/M2/M3/M4) and **Intel** Macs.
 
 ```bash
 # Clone the repository
-git clone https://github.com/AnarManafov/GlimpseTranslate.git
+git clone https://github.com/smrf1093/glimpsetranslate.git
 cd GlimpseTranslate
 
 # Build and run
