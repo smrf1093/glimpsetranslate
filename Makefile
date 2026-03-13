@@ -1,9 +1,11 @@
-.PHONY: build run clean bundle dmg
+.PHONY: build run clean bundle dmg install
 
 APP_NAME = GlimpseTranslate
 BUILD_DIR = .build/release
 APP_BUNDLE = $(APP_NAME).app
 DMG_NAME = $(APP_NAME).dmg
+ENTITLEMENTS = Resources/GlimpseTranslate.entitlements
+INSTALL_DIR = /Applications
 
 # Build release binary
 build:
@@ -21,7 +23,15 @@ bundle: build
 	@cp $(BUILD_DIR)/$(APP_NAME) $(APP_BUNDLE)/Contents/MacOS/$(APP_NAME)
 	@cp Resources/Info.plist $(APP_BUNDLE)/Contents/Info.plist
 	@echo "APPL????" > $(APP_BUNDLE)/Contents/PkgInfo
-	@echo "Built $(APP_BUNDLE)"
+	@codesign --force --sign - --entitlements $(ENTITLEMENTS) --deep $(APP_BUNDLE)
+	@echo "Built and signed $(APP_BUNDLE)"
+
+# Install to /Applications
+install: bundle
+	@rm -rf $(INSTALL_DIR)/$(APP_BUNDLE)
+	@cp -R $(APP_BUNDLE) $(INSTALL_DIR)/$(APP_BUNDLE)
+	@xattr -cr $(INSTALL_DIR)/$(APP_BUNDLE)
+	@echo "Installed to $(INSTALL_DIR)/$(APP_BUNDLE)"
 
 # Create a DMG installer image
 dmg: bundle
